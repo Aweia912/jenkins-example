@@ -1,15 +1,13 @@
-/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { 
-        docker { 
-            image 'maven:3.10.0-eclipse-temurin-21-alpine'
-            args '-v C:/Users/tlkjl/.jenkins/workspace/My-Pipeline_main:/workspace -w /workspace'
-        }
-    }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                bat 'mvn --version'
+                bat 'echo "Hello World"'
+                bat '''
+                    echo "Multiline shell steps works too"
+                    ls
+                '''
             }
         }
     }
