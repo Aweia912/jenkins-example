@@ -3,7 +3,7 @@ pipeline {
     agent { 
         docker { 
             image 'maven:3.10.0-eclipse-temurin-21-alpine'
-            args '-v C:/Users/wenni/.jenkins/workspace/FirstPipeline_main:/workspace -w /workspace'
+            args '-v C:/Users/tlkjl/.jenkins/workspace/My-Pipeline_main:/workspace -w /workspace'
         }
     }
     stages {
